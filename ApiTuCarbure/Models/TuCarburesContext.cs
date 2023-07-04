@@ -14,6 +14,7 @@ namespace ApiTuCarbure.Models
         public DbSet<Station> Stations { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Fuel> Fuels { get; set; }
+        public DbSet<Statement> Statements { get; set; }
 
     }
 }
