@@ -11,7 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<Settings, Settings>();
 builder.Services.AddScoped<IRepository<Station>, StationRepository>();
-builder.Services.AddScoped<IRepositoryB<Brand>, BrandRepository>();
+builder.Services.AddScoped<IRepository<Brand>, BrandRepository>();
+builder.Services.AddScoped<IRepository<Fuel>, FuelRepository>();
 
 builder.Services.AddDbContext<TuCarburesContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));

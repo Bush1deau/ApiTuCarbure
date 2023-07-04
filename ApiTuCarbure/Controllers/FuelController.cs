@@ -8,28 +8,28 @@ using static System.Collections.Specialized.BitVector32;
 namespace ApiTuCarbure.Controllers;
 [Route("api/[controller]")]
 [ApiController]
-public class BrandController : ControllerBase
+public class FuelController : ControllerBase
 {
-    private IRepository<Brand> _repo;
-    public BrandController(IRepository<Brand> repo)
+    private IRepository<Fuel> _repo;
+    public FuelController(IRepository<Fuel> repo)
     {
         _repo = repo;
     }
 
 
     [HttpGet]
-    public List<Brand> Get()
+    public List<Fuel> Get()
     {
-        List<Brand> list;
+        List<Fuel> list;
 
         list = _repo.Get();
         return list;
     }
 
     [HttpGet("{id}")]
-    public Brand Get(int id)
+    public Fuel Get(int id)
     {
-        Brand entity;
+        Fuel entity;
 
         entity = _repo.Get(id);
 

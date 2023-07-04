@@ -5,16 +5,11 @@ using System.Threading.Tasks;
 
 namespace ApiTuCarbure.Interfaces
 {
-    public interface IRepository<Station>
+    public interface IRepository<T>
     {
-        List<Station> Get();
-        Station? Get(int id);
+        List<T> Get();
+        T? Get(int id);
         //T Insert(T entity);
     }
-    public interface IRepositoryB<Brand>
-    {
-        List<Brand> Get();
-        Brand? Get(int id);
-        //T Insert(T entity);
-    }
+   
 }

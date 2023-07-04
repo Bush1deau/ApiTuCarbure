@@ -4,7 +4,7 @@ using ApiTuCarbure.Models;
 
 namespace ApiTuCarbure.RepositoryLayer
 {
-    public class BrandRepository : IRepositoryB<Brand>
+    public class BrandRepository : IRepository<Brand>
     {
         private readonly TuCarburesContext _context;
 
