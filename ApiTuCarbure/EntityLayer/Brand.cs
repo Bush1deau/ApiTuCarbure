@@ -16,5 +16,7 @@ public partial class Brand
     [Key]
     public Int32 id_Brand { get; set; }
     [Required]
-    public String Name { get; set; } 
+    public String Name { get; set; }
+
+    // public ICollection<Station> Stations { get; set; }
 }

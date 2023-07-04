@@ -21,4 +21,9 @@ public partial class Station
     public Double Latitude {get; set; }
     [Required]
     public Double Longitude {get; set;}
+
+
+
+    [ForeignKey("FK_Brand")]
+    public Brand Brand { get; set; }
 }
