@@ -13,7 +13,7 @@ builder.Services.AddSingleton<Settings, Settings>();
 builder.Services.AddScoped<IRepository<Station>, StationRepository>();
 builder.Services.AddScoped<IRepository<Brand>, BrandRepository>();
 builder.Services.AddScoped<IRepository<Fuel>, FuelRepository>();
-builder.Services.AddScoped<IRepository<Statement>, StatementRepository>();
+builder.Services.AddScoped<IRepositoryS<Statement>, StatementRepository >();
 
 builder.Services.AddDbContext<TuCarburesContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));

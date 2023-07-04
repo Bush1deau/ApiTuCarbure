@@ -9,7 +9,12 @@ namespace ApiTuCarbure.Interfaces
     {
         List<T> Get();
         T? Get(int id);
-        //T Insert(T entity);
     }
-   
+    public interface IRepositoryS<Statement>
+    {
+        List<Statement> Get();
+        Statement? Get(int id);
+        Statement Insert(Statement entity);
+    }
+
 }

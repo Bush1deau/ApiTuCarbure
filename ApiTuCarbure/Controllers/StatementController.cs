@@ -10,8 +10,8 @@ namespace ApiTuCarbure.Controllers;
 [ApiController]
 public class StatementController : ControllerBase
 {
-    private IRepository<Statement> _repo;
-    public StatementController(IRepository<Statement> repo)
+    private IRepositoryS<Statement> _repo;
+    public StatementController(IRepositoryS<Statement> repo)
     {
         _repo = repo;
     }
@@ -34,5 +34,13 @@ public class StatementController : ControllerBase
         entity = _repo.Get(id);
 
         return entity;
+    }
+
+    [HttpPost]
+    public ActionResult<Statement> Post([FromBody] Statement entity)
+    {
+        entity = _repo.Insert(entity);
+
+        return StatusCode(StatusCodes.Status201Created, entity);
     }
 }

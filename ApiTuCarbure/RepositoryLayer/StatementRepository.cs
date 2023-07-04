@@ -6,7 +6,7 @@ using ApiTuCarbure.Models;
 namespace ApiTuCarbure.RepositoryLayer
 { 
 
-    public class StatementRepository : IRepository<Statement>
+    public class StatementRepository : IRepositoryS<Statement>
     {
         private readonly TuCarburesContext _context;
 
@@ -25,16 +25,13 @@ namespace ApiTuCarbure.RepositoryLayer
             return _context.Statements.Find(id);
         }
 
-        //   public Station Insert(Station entity)
-        //   {
-        //     entity.ModifiedDate = DateTime.Now;
-        //     entity.Rowguid = Guid.NewGuid();
+        public Statement Insert(Statement entity)
+        {
+            _context.Statements.Update(entity);
 
-        //     _context.Stations.Add(entity);
+            _context.SaveChanges();
 
-        //     _context.SaveChanges();
-
-        //     return entity;
-        //     }
+            return entity;
+        }
     }
 }
