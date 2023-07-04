@@ -21,4 +21,5 @@ public partial class Fuel
     [Required]
     public String codeEuro { get; set;}
 
+
 }

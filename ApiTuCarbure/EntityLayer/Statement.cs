@@ -19,5 +19,5 @@ public partial class Statement
     public DateTime DateTimeStatement { get; set; }
     [Required]
     public Double Price {get; set; }
-  
+
 }

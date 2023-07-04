@@ -18,7 +18,7 @@ namespace ApiTuCarbure.RepositoryLayer
 
         public List<Station> Get()
         {
-            return _context.Stations.Include("Brand").OrderBy(row => row.id_Station).ToList();
+            return _context.Stations.Include("Brand").Include("Fuel").Include("Statement").OrderBy(row => row.id_Station).ToList();
         }
 
         public Station? Get(int id)

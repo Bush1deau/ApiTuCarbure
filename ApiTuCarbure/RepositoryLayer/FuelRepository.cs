@@ -2,6 +2,7 @@
 using ApiTuCarbure.EntityLayer;
 using ApiTuCarbure.Interfaces;
 using ApiTuCarbure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiTuCarbure.RepositoryLayer
 {
