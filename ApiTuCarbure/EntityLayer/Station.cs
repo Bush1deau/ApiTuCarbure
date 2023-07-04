@@ -14,10 +14,11 @@ public partial class Station
 
     [Required]
     [Key]
-    public int id_Station { get; set; }
-    public String Address { get; set; }
-    /*[Required]
-    public float Latitude {get; set; }
+    public Int64 id_Station { get; set; }
     [Required]
-    public float Longitude {get; set;}*/
+    public String Address { get; set; }
+    [Required]
+    public Double Latitude {get; set; }
+    [Required]
+    public Double Longitude {get; set;}
 }

@@ -1,27 +1,26 @@
-﻿
-using ApiTuCarbure.EntityLayer;
+﻿using ApiTuCarbure.EntityLayer;
 using ApiTuCarbure.Interfaces;
 using ApiTuCarbure.Models;
 
 namespace ApiTuCarbure.RepositoryLayer
 {
-    public class StationRepository : IRepository<Station>
+    public class BrandRepository : IRepositoryB<Brand>
     {
         private readonly TuCarburesContext _context;
 
-        public StationRepository(TuCarburesContext context)
+        public BrandRepository(TuCarburesContext context)
         {
             _context = context;
         }
 
-        public List<Station> Get()
+        public List<Brand> Get()
         {
-            return _context.Stations.OrderBy(row => row.id_Station).ToList();
+            return _context.Brands.OrderBy(row => row.id_Brand).ToList();
         }
 
-        public Station? Get(int id)
+        public Brand? Get(int id)
         {
-            return _context.Stations.Find(id);
+            return _context.Brands.Find(id);
         }
 
         //   public Station Insert(Station entity)

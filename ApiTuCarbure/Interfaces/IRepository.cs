@@ -11,4 +11,10 @@ namespace ApiTuCarbure.Interfaces
         Station? Get(int id);
         //T Insert(T entity);
     }
+    public interface IRepositoryB<Brand>
+    {
+        List<Brand> Get();
+        Brand? Get(int id);
+        //T Insert(T entity);
+    }
 }
