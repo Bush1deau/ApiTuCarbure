@@ -14,7 +14,7 @@ public partial class Brand
 
     [Required]
     [Key]
-    public Int64 id_Brand { get; set; }
+    public Int32 id_Brand { get; set; }
     [Required]
     public String Name { get; set; } 
 }

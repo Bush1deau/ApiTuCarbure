@@ -14,7 +14,7 @@ public partial class Station
 
     [Required]
     [Key]
-    public Int64 id_Station { get; set; }
+    public Int32 id_Station { get; set; }
     [Required]
     public String Address { get; set; }
     [Required]
