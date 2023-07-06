@@ -14,6 +14,8 @@ builder.Services.AddScoped<IRepository<Station>, StationRepository>();
 builder.Services.AddScoped<IRepository<Brand>, BrandRepository>();
 builder.Services.AddScoped<IRepository<Fuel>, FuelRepository>();
 builder.Services.AddScoped<IRepositoryS<Statement>, StatementRepository >();
+builder.Services.AddScoped<IRepository<StationFuel>, StationFuelRepository>();
+
 
 builder.Services.AddDbContext<TuCarburesContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
