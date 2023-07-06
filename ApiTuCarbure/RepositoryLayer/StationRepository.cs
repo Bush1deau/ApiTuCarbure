@@ -23,7 +23,7 @@ namespace ApiTuCarbure.RepositoryLayer
 
         public Station? Get(int id)
         {
-            return _context.Stations.Find(id);
+            return _context.Stations.Include("Brand").Where(s => s.id_Station == id).FirstOrDefault();
         }
 
         //   public Station Insert(Station entity)

@@ -23,7 +23,7 @@ namespace ApiTuCarbure.RepositoryLayer
 
         public Statement? Get(int id)
         {
-            return _context.Statements.Find(id);
+            return _context.Statements.Include("Station").Include("Fuel").Where(s => s.id_Statement == id).FirstOrDefault();
         }
 
         public Statement Insert(Statement entity)

@@ -27,9 +27,9 @@ public class StatementController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public Statement Get(int id)
+    public Statement? Get(int id)
     {
-        Statement entity;
+        Statement? entity;
 
         entity = _repo.Get(id);
 

@@ -23,7 +23,7 @@ namespace ApiTuCarbure.RepositoryLayer
 
         public StationFuel? Get(int id)
         {
-            return _context.StationFuels.Find(id);
+            return _context.StationFuels.Include("Station").Include("Fuel").Where(s => s.id_StationFuel == id).FirstOrDefault();
         }
     }
 }

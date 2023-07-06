@@ -27,9 +27,9 @@ public class StationFuelController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public StationFuel Get(int id)
+    public StationFuel? Get(int id)
     {
-        StationFuel entity;
+        StationFuel? entity;
 
         entity = _repo.Get(id);
 
