@@ -20,4 +20,10 @@ public partial class Statement
     [Required]
     public Double Price {get; set; }
 
+    [ForeignKey("FK_Station")]
+    public Station Station { get; set; }
+
+    [ForeignKey("FK_Fuel")]
+    public Fuel Fuel { get; set; }
+
 }

@@ -27,9 +27,4 @@ public partial class Station
     [ForeignKey("FK_Brand")]
     public Brand Brand { get; set; }
 
-    [ForeignKey("FK_Fuel")]
-    public Fuel Fuel { get; set; }
-
-    [ForeignKey("FK_Statement")]
-    public Statement Statement { get; set; }
 }

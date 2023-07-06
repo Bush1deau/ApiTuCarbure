@@ -2,6 +2,7 @@
 using ApiTuCarbure.EntityLayer;
 using ApiTuCarbure.Interfaces;
 using ApiTuCarbure.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiTuCarbure.RepositoryLayer
 { 
@@ -17,7 +18,7 @@ namespace ApiTuCarbure.RepositoryLayer
 
         public List<Statement> Get()
         {
-            return _context.Statements.OrderBy(row => row.id_Statement).ToList();
+            return _context.Statements.Include("Station").Include("Fuel").OrderBy(row => row.id_Statement).ToList();
         }
 
         public Statement? Get(int id)
